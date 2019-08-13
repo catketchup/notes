@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{setspace}
+\usepackage{physics}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+  \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2}]}{\end{trivlist}}
+
+
+\begin{document}
+
+
+\begin{equation}
+  \epsilon_{l l^{\prime} L^{\prime}}=\frac{1+(-1)^{l+l^{\prime}+L^{\prime}}}{2}
+\end{equation}
+
+\begin{equation}
+  \beta_{l l^{\prime} L^{\prime}}=\frac{1-(-1)^{l+l^{\prime}+L^{\prime}}}{2 i}
+\end{equation}
+
+This is the original formula for the lensed field in Hu's paper.
+\begin{equation}
+  \delta X_{l}^{m} \approx \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}} \phi_{L^{\prime}}^{M^{\prime}}(-1)^{m^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {-m^{\prime}} & {-M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}} X_{l^{\prime}}^{m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} \overline{X}_{l^{\prime}}^{m^{\prime}}\right]
+\end{equation}
+
+\begin{align}
+  \delta X_{l}^{m} &\approx \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}} \phi_{L^{\prime}}^{M^{\prime}}(-1)^{m^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {-m^{\prime}} & {-M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}} X_{l^{\prime}}^{m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} \overline{X}_{l^{\prime}}^{m^{\prime}}\right]\\
+                   & = \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}}
+                     \phi_{L^{\prime}}^{-M^{\prime}}(-1)^{M^{\prime}}(-1)^{m+m^{\prime}+M^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}}(-1)^{m^{\prime}} X_{l^{\prime}}^{-m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} (-1)^{m^{\prime}}\overline{X}_{l^{\prime}}^{-m^{\prime}}\right]
+\end{align}
+We know that 
+
+\begin{align}
+  (-1)^{M^{\prime}}  \phi_{L^{\prime}}^{-M^{\prime}} & =  \phi_{L^{\prime}}^{M^{\prime} {*}}\\
+  (-1)^{m^{\prime}} X_{l^{\prime}}^{-m^{\prime}} & =  X_{l^{\prime}}^{m^{\prime} {*}}\\
+  (-1)^{m^{\prime}}\overline{X}_{l^{\prime}}^{-m^{\prime}}  & = \overline{X}_{l^{\prime}}^{m^{\prime} {*}}   
+\end{align}
+
+
+Then I'll manipulate the formular to give a form easier to use.
+...
+
+
+
+\begin{equation}
+  
+\end{equation}
+
+\begin{equation}
+  B_{\ell_{1} m_{1}}^{\mathrm{len}}=\sum_{\ell_{1}^{\prime} m_{1}^{\prime} \ell^{\prime} m^{\prime}} f_{\ell_{1} \ell_{1}^{\prime} \ell^{\prime}}^{E B}\left(\begin{array}{ccc}{\ell_{1}} & {\ell_{1}^{\prime}} & {\ell^{\prime}} \\ {m_{1}} & {m_{1}^{\prime}} & {m}^{\prime}\end{array}\right) \left( E_{\ell_{1}^{\prime} m_{1}^{\prime}}^{*} \phi_{\ell^{\prime} m^{\prime}}^{*}+ \right)
+\end{equation}
+
+
+\begin{equation}
+  B_{\ell_{1} m_{1}}^{\mathrm{len}}=\sum_{\ell_{1}^{\prime} m_{1}^{\prime} \ell^{\prime} m^{\prime}} f_{\ell_{1} \ell_{1}^{\prime} \ell^{\prime}}^{E B}\left(\begin{array}{ccc}{\ell_{1}} & {\ell_{1}^{\prime}} & {\ell^{\prime}} \\ {m_{1}} & {m_{1}^{\prime}} & {m}^{\prime}\end{array}\right) \left( E_{\ell_{1}^{\prime} m_{1}^{\prime}}^{*} \phi_{\ell^{\prime} m^{\prime}}^{*}+ \right)
+\end{equation}
+
+
+
+\end{document}
