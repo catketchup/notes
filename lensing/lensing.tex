@@ -13,6 +13,12 @@
 
 \begin{document}
 
+Firstly, we define:
+
+\begin{equation}
+  F_{\ell \ell^{\prime} L^{\prime}}^{s_{x}} \stackrel{\text { def }}{=}\left[-\ell\left(\ell+1\right)+\ell^{\prime}\left(\ell^{\prime}+1\right)+L^{\prime}\left(L^{\prime}+1\right)\right] \sqrt{\frac{\left(2 \ell+1\right)\left(2 \ell^{\prime}+1\right)\left(2 L^{\prime}+1\right)}{16 \pi}}\left(\begin{array}{ccc}{\ell} & {\ell^{\prime}} & {L^{\prime}} \\ {-s_{x}} & {s_{x}} & {0}\end{array}\right)
+\end{equation}
+
 
 \begin{equation}
   \epsilon_{l l^{\prime} L^{\prime}}=\frac{1+(-1)^{l+l^{\prime}+L^{\prime}}}{2}
@@ -30,15 +36,26 @@ This is the original formula for the lensed field in Hu's paper.
 \begin{align}
   \delta X_{l}^{m} &\approx \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}} \phi_{L^{\prime}}^{M^{\prime}}(-1)^{m^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {-m^{\prime}} & {-M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}} X_{l^{\prime}}^{m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} \overline{X}_{l^{\prime}}^{m^{\prime}}\right]\\
                    & = \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}}
-                     \phi_{L^{\prime}}^{-M^{\prime}}(-1)^{M^{\prime}}(-1)^{m+m^{\prime}+M^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}}(-1)^{m^{\prime}} X_{l^{\prime}}^{-m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} (-1)^{m^{\prime}}\overline{X}_{l^{\prime}}^{-m^{\prime}}\right]
+                     \phi_{L^{\prime}}^{-M^{\prime}}(-1)^{M^{\prime}}(-1)^{m-m^{\prime}-M^{\prime}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}(-1)^{m^{\prime}}\left[\epsilon_{l l^{\prime} L^{\prime}} X_{l^{\prime}}^{-m^{\prime}}+\beta_{l l^{\prime} L^{\prime}} \overline{X}_{l^{\prime}}^{-m^{\prime}}\right]
 \end{align}
-We know that 
+We know that
+
+\begin{equation}
+  m-m^{\prime}-M^{\prime}=0, \ &
+  (-1)^{m-m^{\prime}-M^{\prime}}=1
+\end{equation}
 
 \begin{align}
   (-1)^{M^{\prime}}  \phi_{L^{\prime}}^{-M^{\prime}} & =  \phi_{L^{\prime}}^{M^{\prime} {*}}\\
   (-1)^{m^{\prime}} X_{l^{\prime}}^{-m^{\prime}} & =  X_{l^{\prime}}^{m^{\prime} {*}}\\
   (-1)^{m^{\prime}}\overline{X}_{l^{\prime}}^{-m^{\prime}}  & = \overline{X}_{l^{\prime}}^{m^{\prime} {*}}   
 \end{align}
+
+Then we got:
+
+\begin{equation}
+  \delta X_{l}^{m} \approx \sum_{L^{\prime} M^{\prime}} \sum_{l^{\prime} m^{\prime}} \phi_{L^{\prime}}^{-M^{\prime} {*}}\left(\begin{array}{ccc}{l} & {l^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M^{\prime}}\end{array}\right)  F_{l l^{\prime} L^{\prime}}^{s_{x}}\left[\epsilon_{l l^{\prime} L^{\prime}} X_{l^{\prime}}^{m^{\prime} {*}}+\beta_{l l^{\prime} L^{\prime}} \overline{X}_{l^{\prime}}^{m^{\prime} {*}}\right]
+\end{equation}
 
 
 Then I'll manipulate the formular to give a form easier to use.
@@ -47,16 +64,43 @@ Then I'll manipulate the formular to give a form easier to use.
 
 
 \begin{equation}
+  F_{\ell \ell^{\prime} \ell^{\prime}}^{0}\epsilon_{l l^{\prime} L^{\prime}} = F_{\ell \ell^{\prime} \ell^{\prime}}^{0}
+\end{equation}
+
+\begin{equation}
+  F_{\ell \ell^{\prime} \ell^{\prime}}^{2}\epsilon_{l l^{\prime} L^{\prime}} = \frac{F_{\ell_{1} \ell_{2} \ell}^{2}+F_{\ell_{1} \ell_{2} \ell}^{-2}}{2}
+\end{equation}
+
+
+\begin{equation}
+  F_{\ell \ell^{\prime} \ell^{\prime}}^{2}\beta_{l l^{\prime} L^{\prime}} = \frac{F_{\ell_{1} \ell_{2} \ell}^{2}-F_{\ell_{1} \ell_{2} \ell}^{-2}}{2 i}
+\end{equation}
+
+
+
+So we get:
+\begin{equation}
+  T_{\ell}^{m \mathrm\ {len}}=\sum_{\ell^{\prime} m^{\prime} L^{\prime} M^{\prime}} \left(\begin{array}{ccc}{\ell} & {\ell^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M}^{\prime}\end{array}\right) F_{\ell \ell^{\prime} L^{\prime}}^{0} _{\ell^{\prime}} \phi_{L^{\prime}}^{ My^{\prime} {*}}
+\end{equation}
+
+
+\begin{equation}
+  E_{\ell}^{m \mathrm\ {len}} = \sum_{\ell^{\prime} m^{\prime} L^{\prime} M^{\prime}} \left(\begin{array}{ccc}{\ell} & {\ell^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {L}^{\prime}\end{array}\right) \left(\frac{F_{\ell \ell^{\prime} L^{\prime}}^{2}+F_{\ell \ell^{\prime} L^{\prime}}^{-2}}{2}E_{\ell^{\prime}}^{ m^{\prime} {*}} \phi_{L^{\prime} }^{M^{\prime}{*}}-\frac{F_{\ell \ell^{\prime} L^{\prime}}^{2}-F_{\ell \ell^{\prime} L^{\prime}}^{-2}}{2 i}B_{\ell^{\prime} }^{m^{\prime} {*}} \phi_{L^{\prime}}^{M^{\prime} {*}}\right)
   
 \end{equation}
+  
+
 
 \begin{equation}
-  B_{\ell_{1} m_{1}}^{\mathrm{len}}=\sum_{\ell_{1}^{\prime} m_{1}^{\prime} \ell^{\prime} m^{\prime}} f_{\ell_{1} \ell_{1}^{\prime} \ell^{\prime}}^{E B}\left(\begin{array}{ccc}{\ell_{1}} & {\ell_{1}^{\prime}} & {\ell^{\prime}} \\ {m_{1}} & {m_{1}^{\prime}} & {m}^{\prime}\end{array}\right) \left( E_{\ell_{1}^{\prime} m_{1}^{\prime}}^{*} \phi_{\ell^{\prime} m^{\prime}}^{*}+ \right)
+  B_{\ell}^{m \mathrm\ {len}}=\sum_{\ell^{\prime} m^{\prime} L^{\prime} M^{\prime}} \left(\begin{array}{ccc}{\ell} & {\ell^{\prime}} & {L^{\prime}} \\ {m} & {m^{\prime}} & {M}^{\prime}\end{array}\right) \left(\frac{F_{\ell \ell^{\prime} L^{\prime}}^{2}+F_{\ell \ell^{\prime} L^{\prime}}^{-2}}{2}B_{\ell^{\prime}}^{ m^{\prime} {*}} \phi_{L^{\prime} }^{ M^{\prime} {*}}+\frac{F_{\ell \ell^{\prime} L^{\prime}}^{2}-F_{\ell \ell^{\prime} L^{\prime}}^{-2}}{2 i}E_{\ell^{\prime}}^{ m^{\prime} {*}} \phi_{L^{\prime}}^{ M^{\prime} {*}}\right)
 \end{equation}
 
 
+if we neglect the unlensed B:
+
 \begin{equation}
-  B_{\ell_{1} m_{1}}^{\mathrm{len}}=\sum_{\ell_{1}^{\prime} m_{1}^{\prime} \ell^{\prime} m^{\prime}} f_{\ell_{1} \ell_{1}^{\prime} \ell^{\prime}}^{E B}\left(\begin{array}{ccc}{\ell_{1}} & {\ell_{1}^{\prime}} & {\ell^{\prime}} \\ {m_{1}} & {m_{1}^{\prime}} & {m}^{\prime}\end{array}\right) \left( E_{\ell_{1}^{\prime} m_{1}^{\prime}}^{*} \phi_{\ell^{\prime} m^{\prime}}^{*}+ \right)
+  B_{\ell}^{m \mathrm \ {len}}=\sum_{\ell^{\prime} m^{\prime} \ell^{\prime} m^{\prime}} \left(\begin{array}{ccc}{\ell} & {\ell^{\prime}} & {\ell^{\prime}} \\ {m} & {m^{\prime}} & {M}^{\prime}\end{array}\right) \frac{F_{\ell \ell^{\prime} L}^{2}-F_{\ell \ell^{\prime} L}^{-2}}{2i} E_{\ell^{\prime}}^{ m^{\prime} {*}} \phi_{\ell^{\prime}}^{ M^{\prime} {*}}
+ 
 \end{equation}
 
 
